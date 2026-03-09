@@ -1,6 +1,8 @@
 # Anify
 Robust anime, manga, and light novel web-app.
 
+**NOTE:** I no longer maintain this project as the method used for obtaining proxies no longer works (Censys put up a paywall). However, the logic for most of the project such as mapping and storing data still works. If anyone can figure out a way to proxy requests efficiently and without a major paywall, open a pull request or issue and I can resume development if I have time.
+
 ## Installation
 **NOTE:** This project utilizes [Bun](https://bun.sh). Please install it before attempting to run Anify.
 1. Clone this repository and `cd` into the directory.
