@@ -1,0 +1,21 @@
+name: Deploy to Hugging Face
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Push to HF
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "daryl@example.com"
+          git config --global user.name "Daryl"
+          # On va dans le dossier backend, on initialise git et on pousse vers HF
+          cd anify-backend
+          git init
+          git add .
+          git commit -m "Deploy to HF"
+          git push --force https://daryl0515:$HF_TOKEN@huggingface.co/spaces/daryl0515/Anistream-Api main
